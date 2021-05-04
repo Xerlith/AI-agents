@@ -2,7 +2,6 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-[CreateAssetMenu(fileName = "New Vegetation", menuName = "Vegetation Ranges")]
 public class Vegetation : ScriptableObject
 {
     public List<GameObject> treeTypes;
