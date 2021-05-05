@@ -4,16 +4,34 @@ using UnityEngine;
 
 public class ActorSelector : MonoBehaviour
 {
-    public List<GameObject> m_actorList;
+    public List<GameObject> actorList;
 
-    void Start()
+    public Plot plot;
+
+    public class ActorAssignment
+    {
+        public GameObject agent;
+        public PlotActor role;
+    }
+
+    [SerializeField]
+    private List<ActorAssignment> plotAssignments;
+
+    private List<PlotActor> plotRoles
+    {
+        get
+        {
+            return this.plot.actors;
+        }
+    }
+
+    public void assignAgentsToRoles()
     {
         
     }
 
-    // Update is called once per frame
-    void Update()
+    private float measureAssignmentAccuracy()
     {
-        
+        return 0.0f;
     }
 }

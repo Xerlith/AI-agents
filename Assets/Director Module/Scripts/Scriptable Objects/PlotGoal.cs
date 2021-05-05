@@ -9,4 +9,12 @@ public class PlotGoal : ScriptableObject
 
     public string goalDescription;
 
+    public PlotActor actor;
+
+    /// <summary>
+    /// THe minimum ratio of an agent's similarity to the desired actor (Based on trait values).
+    /// </summary>
+    [Range(0,1)]
+    public float ActorSelectionAccuracy;
+
 }

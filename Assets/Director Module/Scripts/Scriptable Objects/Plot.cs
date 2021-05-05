@@ -1,18 +1,22 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 
-public class Plot : MonoBehaviour
+public class Plot : ScriptableObject
 {
-    // Start is called before the first frame update
-    void Start()
+    public List<PlotGoal> goals;
+    public List<PlotActor> actors
     {
-        
+        get
+        {
+            return goals.Select(o => o.actor).ToList();
+        }
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+    /// <summary>
+    /// An informational text unused by the system.
+    /// </summary>
+    public string description;
+
 }
