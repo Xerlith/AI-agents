@@ -6,16 +6,12 @@ namespace GOAPModule
 {
     public class GOAPRequirement : ScriptableObject
     {
-        // Start is called before the first frame update
-        void Start()
+        public Dictionary<Trait, float> traitValues;
+
+
+        public bool Evaluate(GameObject actor)
         {
-
-        }
-
-        // Update is called once per frame
-        void Update()
-        {
-
+            return true;
         }
     }
 }
