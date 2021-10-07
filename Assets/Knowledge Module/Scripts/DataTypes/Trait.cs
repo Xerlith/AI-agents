@@ -2,12 +2,14 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Trait : ScriptableObject
+public struct Trait
 {
-
     public SOTags.Tag tag;
     public float value;
 
-    [SerializeField]
-    private List<AILayer> m_affectedLayers;
+    public Trait (SOTags.Tag tag, float value)
+    {
+        this.tag = tag;
+        this.value = value;
+    }
 }

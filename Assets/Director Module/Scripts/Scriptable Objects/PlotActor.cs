@@ -12,18 +12,10 @@ using UnityEngine;
  */
 public class PlotActor : ScriptableObject
 {
-    public List<SOTags.Tag> traits;
-    public List<float> traitValues;
+    public List<Trait> traits;
 
     /// <summary>
     /// An informational text unused by the system.
     /// </summary>
     public string description;
-
-    public Dictionary<SOTags.Tag, float> traitsWithValues {
-        get
-        {
-            return traits.Zip(traitValues, (k, v) => new { k, v }).ToDictionary(x => x.k, x => x.v);
-        }
-    }
 }
